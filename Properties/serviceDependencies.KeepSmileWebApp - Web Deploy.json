@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "secretStore": null,
+      "type": "mssql.onprem",
+      "connectionId": "ConnectionStrings:DefaultConnection",
+      "dynamicId": null
+    },
+    "mssql1": {
+      "ignored": "true",
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:AZURE_SQL_CONNECTIONSTRING",
+      "dynamicId": null
+    },
+    "apis1": {
+      "apiEndpoint": "https://demowebappapi.azure-api.net/",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/DemoWebAppapi/apis/DemoWebApp",
+      "type": "apis.azure"
+    }
+  }
+}
