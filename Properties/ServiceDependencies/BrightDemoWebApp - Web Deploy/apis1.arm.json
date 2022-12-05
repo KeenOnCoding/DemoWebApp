@@ -4,7 +4,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "WDempWebAppResourceGroup",
+      "defaultValue": "MyResourceGroup",
       "metadata": {
         "_parameterType": "resourceGroup",
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
@@ -49,17 +49,17 @@
           "contentVersion": "1.0.0.0",
           "resources": [
             {
-              "name": "DemoWebAppapi",
+              "name": "BrightDemoWebApp",
               "type": "Microsoft.ApiManagement/service",
               "location": "[parameters('resourceLocation')]",
               "properties": {
-                "publisherEmail": "serhii.riabushenko@sombrainc.com",
-                "publisherName": "Sergeii Riabushenko",
+                "publisherEmail": "sr@atalef.ai",
+                "publisherName": "Sergei",
                 "notificationSenderEmail": "apimgmt-noreply@mail.windowsazure.com",
                 "hostnameConfigurations": [
                   {
                     "type": "Proxy",
-                    "hostName": "demowebappapi.azure-api.net",
+                    "hostName": "brightdemowebapp.azure-api.net",
                     "encodedCertificate": null,
                     "keyVaultId": null,
                     "certificatePassword": null,
@@ -95,14 +95,14 @@
             },
             {
               "type": "Microsoft.ApiManagement/service/apis",
-              "name": "DemoWebAppapi/DemoWebApp",
+              "name": "BrightDemoWebApp/DemoWebApp",
               "properties": {
                 "displayName": "DemoWebApp",
                 "apiRevision": "1",
                 "description": null,
                 "subscriptionRequired": true,
                 "serviceUrl": null,
-                "path": "demowebappatalef.azurewebsites.net",
+                "path": "",
                 "protocols": [
                   "https"
                 ],
@@ -118,7 +118,7 @@
               },
               "apiVersion": "2019-12-01",
               "dependsOn": [
-                "DemoWebAppapi"
+                "BrightDemoWebApp"
               ]
             }
           ]
